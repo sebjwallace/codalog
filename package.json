@@ -1,0 +1,29 @@
+{
+  "name": "control-flow-trace",
+  "version": "1.0.0",
+  "description": "trace data though functions",
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env NODE_PATH=./ node ./index.js",
+    "test": "./node_modules/mocha/bin/mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sebjwallace/control-flow-trace.git"
+  },
+  "author": "Sebastian Wallace",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sebjwallace/control-flow-trace/issues"
+  },
+  "homepage": "https://github.com/sebjwallace/control-flow-trace#readme",
+  "dependencies": {
+    "redis": "^2.8.0",
+    "uniqid": "^5.0.3"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "cross-env": "^5.2.0",
+    "mocha": "^6.1.4"
+  }
+}
