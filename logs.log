@@ -1,0 +1,8 @@
+{"level":"info","id":"TRACE:tzghg3kujx3lje11","time":1560970510021,"func":"a","data":0}
+{"level":"info","id":"TRACE:tzghg3kujx3lje11","time":1560970510024,"func":"b","data":1}
+{"level":"info","id":"TRACE:tzghg3m4jx3lmfog","time":1560970652128,"func":"a","data":0}
+{"level":"info","id":"TRACE:tzghg3m4jx3lmfog","time":1560970652131,"func":"b","data":1}
+{"level":"info","id":"TRACE:tzghg3n7jx3lnhoy","time":1560970701394,"func":"a","data":{"name":"adam"}}
+{"level":"info","id":"TRACE:tzghg3n7jx3lnhoy","time":1560970701397,"func":"b","data":{"name":"adam","profession":"crafter"}}
+{"level":"info","id":"TRACE:tzghg3nsjx3lntqv","time":1560970717015,"func":"a","data":{"name":"adam"}}
+{"level":"info","id":"TRACE:tzghg3nsjx3lntqv","time":1560970717018,"func":"b","data":{"name":"adam","profession":"crafter"}}

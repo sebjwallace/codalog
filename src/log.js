@@ -1,32 +1,38 @@
 
-const redis = require('redis')
-const client = redis.createClient()
+const { createLogger, transports } = require('winston')
+const logger = createLogger({
+	transports: [
+		new transports.File({
+			filename: 'logs.log'
+		})
+	]
+})
 
-module.exports = function(func,data){
+module.exports = function (func, data) {
 
-    const callStack = getCallStack()
-    const id = getTraceId(callStack)
-    const time = Date.now()
-    const log = JSON.stringify({
-        func: func.name,
-        data,
-        callStack
-    })
+	const callStack = getCallStack()
+	const id = getTraceId(callStack)
+	const time = Date.now()
 
-    client.set(`${id}:${time}`, log)
-    client.keys(`${id}:*`,(err,keys) => console.log(keys))
+	logger.log({
+		level: 'info',
+		id,
+		time,
+		func: func.name,
+		data
+	})
 
 }
 
-function getTraceId(callStack){
+function getTraceId(callStack) {
 
-    callStack = callStack || getCallStack()
-    return callStack.match(/TRACE\:\w+/)[0]
+	callStack = callStack || getCallStack()
+	return callStack.match(/PATH\:\w+/)[0]
 
 }
 
-function getCallStack(){
+function getCallStack() {
 
-    return new Error().stack
+	return new Error().stack
 
 }

@@ -3,7 +3,7 @@ const uniqid = require('uniqid')
 
 module.exports = function(callback){
 
-    const name = `TRACE:${uniqid()}`
+    const name = `PATH:${uniqid()}`
 
     Object.defineProperty(
         callback,
