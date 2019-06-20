@@ -1,5 +1,7 @@
 # codalog
 
+NOTE: this project is currently in WIP state
+
 This is a particular logging module that traces an execution path. Within every function that codalog is used a log is created to capture the function details and the data being passed into it. Each log belongs to a unique path so that the data transformation between functions can be traced.
 
 Sample Javascript code using codalog:
